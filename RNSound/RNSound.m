@@ -156,7 +156,7 @@ RCT_EXPORT_METHOD(pause:(nonnull NSNumber*)key withCallback:(RCTResponseSenderBl
   AVAudioPlayer* player = [self playerForKey:key];
   if (player) {
     [player pause];
-    callback(@[]);
+    callback(@[[NSNull null]]);
   }
 }
 
@@ -165,7 +165,7 @@ RCT_EXPORT_METHOD(stop:(nonnull NSNumber*)key withCallback:(RCTResponseSenderBlo
   if (player) {
     [player stop];
     player.currentTime = 0;
-    callback(@[]);
+    callback(@[[NSNull null]]);
   }
 }
 
